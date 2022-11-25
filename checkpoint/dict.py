@@ -14,25 +14,25 @@ print("list, add, delete or quit. \n")
 
 
 
-def insert_word(C, word, translation):
+def insert_word(Connection, word, translation):
     return f"returning ''{word} and {translation}"
 
-def read_dict(C):
-    cur = C.cursor()
+def read_dict(Connection):
+    cur = Connection.cursor()
     cur.execute("SELECT id, word, translation FROM dictionary;")
     rows = cur.fetchall()
     cur.close()
     return rows
-def add_word(C, word, translation):
-    cur = C.cursor()
+def add_word(Connection, word, translation):
+    cur = Connection.cursor()
     cur.execute(f"INSERT INTO dictionary (word, translation) VALUES ('{word}', '{translation}');")
     cur.close()
-def delete_word(C, ID):
-    cur = C.cursor()
+def delete_word(Connection, ID):
+    cur = Connection.cursor()
     cur.execute(f"DELETE FROM dictionary WHERE id = '{ID}';")
     cur.close()
-def save_dict(C):
-    cur = C.cursor()
+def save_dict(Connection):
+    cur = Connection.cursor()
     cur.execute("COMMIT;")
     cur.close()
 
