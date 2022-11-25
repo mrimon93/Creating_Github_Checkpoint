@@ -13,7 +13,7 @@ print("Welcome Put one of these Commands ")
 print("list, add, delete or quit. \n")
 
 
-
+# If you want to see the changes check branch development and you will discover some changes :)
 def insert_word(C, word, translation):
     return f"returning ''{word} and {translation}"
 
