@@ -1,0 +1,14 @@
+So, i used pycharm because it was a little bit easier and almost felt like 
+cheating when using git. That is why the second one probably be a wrong answer.
+
+Hehe
+
+
+2.6 
+Answer to first question git log
+
+git log --oneline origin/master..HEAD
+git rev-list --oneline ^origin/master HEAD
+
+answer to third question 
+git init
